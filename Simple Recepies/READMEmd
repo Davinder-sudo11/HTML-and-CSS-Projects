@@ -1,0 +1,33 @@
+
+# Simple Recipes
+
+## Project Description
+Simple Recipes is a basic HTML and CSS website that shares
+easy and delicious recipes for everyday cooking.
+
+## Features
+- Home page with a welcome section
+- Navigation menu
+- Three recipe cards
+- Ingredients and cooking instructions
+- Additional About section
+- Contact section
+- Responsive design for mobile and desktop screens
+
+## Technologies Used
+- HTML5
+- CSS3
+
+## What I Learned
+Through this project, I practiced creating web page structures
+with HTML and styling them with CSS. I also learned about
+navigation links, images, CSS Grid, hover effects, and
+responsive web design.
+
+## How to Run
+1. Download or clone this repository.
+2. Open the Simple-Recipes folder.
+3. Open index.html in a web browser.
+
+## Author
+Student Web Development Project

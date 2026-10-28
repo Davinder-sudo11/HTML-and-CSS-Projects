@@ -1,0 +1,276 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #287a4b;
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #333333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #287a4b;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #287a4b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1c5936;
+}
+
+/* Recipes Section */
+.section {
+    padding: 65px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #287a4b;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #666666;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+.recipe-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 22px;
+}
+
+.recipe-content h3 {
+    color: #287a4b;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.recipe-content .time {
+    color: #a45d28;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.recipe-content h4 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.recipe-content ul {
+    padding-left: 22px;
+}
+
+/* About Section */
+.about-section {
+    background-color: #f1f7f1;
+    padding: 65px 0;
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-content h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #287a4b;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.about-content h3 {
+    color: #287a4b;
+    margin: 25px 0 10px;
+    font-size: 23px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #287a4b;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin-bottom: 22px;
+}
+
+/* Footer */
+.footer {
+    background-color: #24352a;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card img {
+        height: 230px;
+    }
+
+    .section-title,
+    .about-content h2 {
+        font-size: 27px;
+    }
+}
